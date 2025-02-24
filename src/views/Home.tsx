@@ -10,7 +10,11 @@ function Home() {
     <div className="Home">
       <div className="titulo">
         <h1 className="nombre">Gabriel Caldubehere</h1>
-        <h2 className="subtitulo">Desarrollador Front End</h2>
+        <div>
+          <h2 className="subtitulo">Desarrollador Front-End</h2>
+          <h3>Creando experiencias digitales innovadoras</h3>
+        </div>
+
         <div className="redes-sociales">
           <a href="https://github.com/gabrielcaldubehere" target="_blank">
             <BsGithub size={50} color="green" />
