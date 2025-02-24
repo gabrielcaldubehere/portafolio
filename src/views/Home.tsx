@@ -7,7 +7,7 @@ import "../App.css";
 
 function Home() {
   return (
-    <div className="Home">
+    <div id="home">
       <div className="titulo">
         <h1 className="nombre">Gabriel Caldubehere</h1>
         <div>
@@ -23,7 +23,7 @@ function Home() {
             href="https://www.linkedin.com/in/gabrielcaldubehere"
             target="_blank"
           >
-            <FaLinkedin size={50} color="orange" />
+            <FaLinkedin size={50} color="#0e76a8" />
           </a>
           <a href="/CV Hector Gabriel Caldubehere.pdf" download>
             <FaFileDownload size={50} color="#7e13b0" />

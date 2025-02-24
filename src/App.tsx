@@ -1,20 +1,18 @@
-import { useState } from "react";
-import Header from "./components/Header";
-import Home from "./views/Home";
-import About from "./views/About";
 import "./App.css";
 import "@fontsource/poppins";
+import React from "react";
+import Home from "./views/Home";
+import About from "./views/About";
+import Header from "./components/Header";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
+    <div>
       <Header />
-      <main>
-        <Home />
-        <About />
-      </main>
+      <Home />
+      <About />
     </div>
   );
-}
+};
 
 export default App;

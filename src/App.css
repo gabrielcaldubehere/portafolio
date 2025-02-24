@@ -7,6 +7,9 @@ body {
   color: white;
   font-family: "Poppins", sans-serif;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 .navbar-list {
   display: flex;
@@ -27,7 +30,7 @@ a {
 
 /*Home*/
 
-.Home {
+#home {
   /*background-color: teal;*/
   display: flex;
   justify-content: center;
