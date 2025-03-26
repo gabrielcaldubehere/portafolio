@@ -3,14 +3,14 @@ import "@fontsource/poppins";
 import React from "react";
 import Home from "./views/Home";
 import About from "./views/About";
-import Header from "./components/Header";
+import Projects from "./views/Projects";
 
 const App = () => {
   return (
     <div>
-      <Header />
-      <Home />
+            <Home />
       <About />
+      <Projects />
     </div>
   );
 };

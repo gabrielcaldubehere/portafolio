@@ -11,21 +11,66 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Estilos generales para la navbar */
+.navbar {
+  position: fixed; /* Fija la barra en la parte superior */
+  top: 0; /* Coloca la barra de navegación en la parte superior */
+  left: 0; /* Alinea la barra con el borde izquierdo */
+  width: 100%; /* Ocupa todo el ancho de la ventana */
+  background-color: #000000; /*Fondo oscuro */
+  padding: 10px 20px; /* Padding para espacio alrededor */
+  z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}
+
+/* Lista de elementos de la navbar */
 .navbar-list {
-  display: flex;
-  justify-content: flex-end;
+  list-style-type: none; /* Elimina los puntos de lista */
+  margin: 0;
+  padding: 0;
+  display: flex; /* Hace que los elementos estén en fila */
+  justify-content: flex-end; /* Alinea los elementos a la derecha */
+  gap: 20px; /* Añade espacio entre los elementos de la lista */
+}
+
+/* Estilo de los enlaces */
+.navbar-list a {
+  color: white; /* Color blanco para los enlaces */
+  text-decoration: none; /* Elimina el subrayado por defecto */
+  padding: 10px 15px; /* Espaciado dentro de los enlaces */
+  position: relative; /* Necesario para la posición de la línea */
+  transition: color 0.3s ease; /* Transición suave para el color del texto */
+}
+
+/* Línea debajo del enlace en hover */
+.navbar-list a::after {
+  content: ""; /* No muestra texto, solo la línea */
+  position: absolute; /* Para colocar la línea en la parte inferior */
+  bottom: 0; /* Coloca la línea en la parte inferior del enlace */
+  left: 0;
+  width: 0; /* Empieza sin ancho */
+  height: 2px; /* Alto de la línea */
+  background-color: #39d1f7; /* Color de la línea */
+  transition: width 0.3s ease; /* Transición suave para el ancho de la línea */
+}
+
+/* Efecto hover: expandir la línea debajo */
+.navbar-list a:hover::after {
+  width: 100%; /* Expande la línea al 100% del ancho del enlace */
+}
+
+.navbar-list a:hover {
+  color: #39d1f7; /* Cambia el color del texto al mismo color de la línea */
+}
+
+/* Evitar que el contenido se oculte detrás de la navbar fija */
+body {
+  padding-top: 60px; /* Ajusta este valor según el tamaño de la navbar */
 }
 
 li {
   list-style-type: none;
   padding: 5px;
   margin: 5px 20px 5px 0px;
-}
-
-a {
-  color: white;
-  text-decoration: none;
-  font-size: 1rem;
 }
 
 /*Home*/
@@ -38,6 +83,7 @@ a {
   gap: 50px;
   width: 100%;
   height: 500px;
+  margin-top: 100px;
 }
 
 .titulo {
@@ -79,25 +125,30 @@ h3 {
   gap: 20px;
 }
 
-.descargar {
-  background-color: rgb(245, 146, 16);
-  color: white;
-  font-size: 1rem;
-  height: 30px;
-  width: 150%;
-  border-radius: 20%;
-  border: none;
+/* Establecer el color inicial de los enlaces */
+.social-link {
+  color: #39d1f7; /* Color deseado */
+  transition: color 0.3s ease; /* Transición suave para el cambio de color */
 }
+
+/* Efecto de hover */
+.social-link:hover {
+  color: #00b5e2; /* Color al hacer hover, puedes cambiarlo a tu gusto */
+}
+
 .perfil {
   height: 350px;
 }
 
 /*About*/
 
-.about {
+#about {
   border: 1px solid #ffffff;
   border-radius: 5px;
-  margin: 15px 20px;
+  margin-top: 250px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 150px;
 }
 #welcome {
   text-align: left;
@@ -109,3 +160,5 @@ h3 {
   padding-left: 20px;
   padding-right: 20px;
 }
+
+/*Projects*/
